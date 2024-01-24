@@ -15,6 +15,11 @@ return new class extends Migration {
             $table->string('title');
             $table->string('desc');
             $table->string('writer');
+            $table->string('size_book');
+            $table->string('book_page');
+            $table->string('years');
+            $table->string('isbn');
+            $table->string('image_featured')->nullable();
             $table->string('tag');
             $table->timestamps();
         });

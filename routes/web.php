@@ -20,6 +20,10 @@ Route::get('/books', function () {
     return view('pages.books');
 })->name('books');
 
+Route::get('/detailsbooks', function () {
+    return view('pages.detailsBooks');
+})->name('books');
+
 Route::get('/beranda', function () {
     return view('pages.beranda');
 })->name('beranda');
@@ -33,5 +37,5 @@ Route::get('/social/{platform}', function ($platform) {
             return redirect('https://www.instagram.com');
         default:
             return redirect('#');
-        }
+    }
 });

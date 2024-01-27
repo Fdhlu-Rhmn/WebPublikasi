@@ -1,7 +1,8 @@
 @include('common.header')
 
 
-  @livewire('list-book')
+  <b>Books Page</b>
+  @livewire('detail-book')
 
 
 @include('common.footer')

@@ -20,4 +20,8 @@ class Books extends Model
         'image_featured',
         'tag',
     ];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+    ];
 }

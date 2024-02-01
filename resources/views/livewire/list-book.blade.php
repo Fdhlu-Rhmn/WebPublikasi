@@ -96,7 +96,7 @@
                 <span class="px-2 py-1 bg-gray-500 text-white text-xs rounded">Old Book</span> --}}
             @endif
         </div>
-              <img src="{{ $book->image_featured }}" alt="Book Cover" class="mb-2">
+              <img src="{{ asset('storage/' . $book->image_featured) }}" alt="Book Cover" class="mb-2">
               <span class="mb-2">{{ $book->price ?? 'Price not available' }}</span>
               <span>{{ $book->title }}</span>
           </div>

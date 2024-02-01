@@ -92,8 +92,8 @@
                 <span class="px-2 py-1 bg-green-500 text-white text-xs rounded">New Book</span>
             @elseif($book->tag == '2')
                 <span class="px-2 py-1 bg-red-500 text-white text-xs rounded">Upcoming</span>
-            @else
-                <span class="px-2 py-1 bg-gray-500 text-white text-xs rounded">Old Book</span>
+            {{-- @else
+                <span class="px-2 py-1 bg-gray-500 text-white text-xs rounded">Old Book</span> --}}
             @endif
         </div>
               <img src="{{ $book->image_featured }}" alt="Book Cover" class="mb-2">

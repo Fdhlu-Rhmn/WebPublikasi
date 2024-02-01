@@ -8,13 +8,13 @@
 
       <!-- Navigation links -->
       <div class="flex items-center text-white space-x-6">
-          <a href="/beranda" class="hover:bg-violet-400 p-2 rounded-full">Beranda</a>
+          <a href="/" class="hover:bg-violet-400 p-2 rounded-full">Beranda</a>
           <a href="/books" class="hover:bg-violet-400 p-2 rounded-full">Books</a>
       </div>
 
       <!-- Social media icons -->
       <div class="flex items-center">
-          <a href="#" class="text-white hover:bg-violet-400 p-2 rounded-full"><x-bi-facebook /></a>
+          <a href="https://www.facebook.com/yayasanmasagena?mibextid=ZbWKwL" class="text-white hover:bg-violet-400 p-2 rounded-full"><x-bi-facebook /></a>
           <a href="#" class="text-white hover:bg-violet-400 p-2 rounded-full ml-2"><x-bi-instagram /></a>
       </div>
   </div>

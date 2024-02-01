@@ -1,5 +1,9 @@
-@include('common.header')
+<div id="header" wire:loading.class="hidden">
+  @include('common.header')
+</div>
 
-<b>Beranda Pages</b>
+@livewire('beranda')
 
-@include('common.footer')
+<div id="footer" wire:loading.class="hidden">
+  @include('common.footer')
+</div>

@@ -60,6 +60,7 @@ class BooksResource extends Resource
                     ->schema([
                         Forms\Components\FileUpload::make('image_featured')
                             ->label('Upload Image')
+                            ->disk('public')
                             ->image()
                             ->reactive()
                             ->directory('post-images'),

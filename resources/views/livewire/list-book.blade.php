@@ -82,6 +82,7 @@
 
   <div class="grid grid-cols-3 gap-4">
       @foreach($books as $book)
+      <a href="books/{{$book->id}}">
         <div class="border p-4 relative flex flex-col items-center">
           <div class="mb-2 absolute top-0 right-0 bg-transparent text-right">
             @php
@@ -100,6 +101,7 @@
               <span class="mb-2">{{ $book->price ?? 'Price not available' }}</span>
               <span>{{ $book->title }}</span>
           </div>
+      </a>
       @endforeach
   </div>
 </div>

@@ -1,5 +1,5 @@
 @include('common.header')
 
-<b>Beranda Pages</b>
+@livewire('beranda')
 
 @include('common.footer')

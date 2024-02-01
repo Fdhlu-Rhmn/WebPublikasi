@@ -14,7 +14,11 @@ use Livewire\Livewire;
 |
 */
 
-Route::get('/', \App\Livewire\Home::class)->name('home');
+// Route::get('/', \App\Livewire\Home::class)->name('home');
+
+Route::get('/', function () {
+    return view('pages.beranda');
+})->name('beranda');
 
 Route::get('/books', function () {
     return view('pages.books');
@@ -24,9 +28,7 @@ Route::get('/detailsbooks', function () {
     return view('pages.detailsBooks');
 })->name('books');
 
-Route::get('/beranda', function () {
-    return view('pages.beranda');
-})->name('beranda');
+
 
 // Route for social media redirects
 Route::get('/social/{platform}', function ($platform) {

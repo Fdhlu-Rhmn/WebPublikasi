@@ -24,9 +24,9 @@ Route::get('/books', function () {
     return view('pages.books');
 })->name('books');
 
-Route::get('/detailsbooks', function () {
-    return view('pages.detailsBooks');
-})->name('books');
+Route::get('/books/{bookId}', function ($bookId) {
+    return view('pages.detailsBooks', ['bookId' => $bookId]);
+})->name('detailBooks');
 
 
 

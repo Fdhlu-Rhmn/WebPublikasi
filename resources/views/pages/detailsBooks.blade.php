@@ -1,8 +1,7 @@
 @include('common.header')
 
-
-  <b>Books Page</b>
-  @livewire('detail-book')
-
+  @livewireStyles
+  <livewire:detail-book :book-id="$bookId" />
+  @livewireScripts
 
 @include('common.footer')

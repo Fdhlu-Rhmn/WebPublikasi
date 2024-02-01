@@ -12,7 +12,7 @@ class Beranda extends Component
 
     public function mount()
     {
-        $this->books = Books::all();
+        $this->books = Books::inRandomOrder()->take(5)->get();
     }
     public function render()
     {

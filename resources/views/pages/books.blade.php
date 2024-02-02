@@ -1,9 +1,9 @@
-@include('common.header')
+<div id="header" wire:loading.class="hidden">
+    @include('common.header')
+</div>
 
+@livewire('list-book')
 
-  @livewireStyles
-  @livewire('list-book')
-  @livewireScripts
-
-
-@include('common.footer')
+<div id="footer" wire:loading.class="hidden">
+    @include('common.footer')
+</div>

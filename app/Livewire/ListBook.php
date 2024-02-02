@@ -10,6 +10,7 @@ class ListBook extends Component
 {
     public $books;
     public $filter;
+    public $search;
 
     public function mount()
     {
@@ -19,20 +20,26 @@ class ListBook extends Component
 
     public function loadBooks()
     {
+        $query = Books::query();
+
         if ($this->filter === 'new') {
-            $this->books = Books::where('created_at', '>', Carbon::now()->subYear())
-                                ->where('tag', '1')
-                                ->get();
+            $query->where('created_at', '>', Carbon::now()->subYear())
+                ->where('tag', '1');
         } elseif ($this->filter === 'upcoming') {
-            $this->books = Books::where('tag', '2')->get();
-        } else {
-            $this->books = Books::all();
+            $query->where('tag', '2');
         }
+
+        if (!empty($this->search)) {
+            $query->where('title', 'like', '%' . $this->search . '%');
+        }
+
+        $this->books = $query->get();
     }
 
     public function setFilter($filter)
     {
         $this->filter = $filter;
+        $this->search = '';
         $this->loadBooks();
     }
 

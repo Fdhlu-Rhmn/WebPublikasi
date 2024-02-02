@@ -21,8 +21,8 @@
             <!-- Navigation -->
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="/" class="text-gray-600 hover:text-gray-900">Beranda</a></li>
-                    <li><a href="/books" class="text-gray-600 hover:text-gray-900">Books</a></li>
+                    <li><a href="/" class="text-gray-600 hover:bg-gray-200 hover:text-gray-1000 p-2 rounded-full">Beranda</a></li>
+                    <li><a href="/books" class="text-gray-600 hover:bg-gray-200 hover:text-gray-1000 p-2 rounded-full">Books</a></li>
                 </ul>
             </nav>
         </div>

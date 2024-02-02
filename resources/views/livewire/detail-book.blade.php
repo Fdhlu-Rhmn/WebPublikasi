@@ -1,8 +1,8 @@
 <div class="flex justify-center my-8">
     <div class="max-w-4xl w-full rounded overflow-hidden shadow-lg px-5 py-5 md:mx-auto border">
         <div class="flex md:flex-shrink-0">
-            <img class="h-auto w-full object-cover md:w-48" src="{{ asset('storage/' . $book->image_featured) }}"
-                alt="Cover Buku">
+            <img class="h-auto w-full object-cover md:w-48" src="{{ asset('storage/post-images/placeholder.jpeg') }}"
+                data-src="{{ asset('storage/' . $book->image_featured) }}" alt="Cover Buku">
             <table class="w-full text-sm text-left rtl:text-right">
                 <tbody>
                     <tr class="bg-white border-b">

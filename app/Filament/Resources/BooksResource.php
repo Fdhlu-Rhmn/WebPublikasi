@@ -68,6 +68,9 @@ class BooksResource extends Resource
                 Forms\Components\Grid::make(1)
                     ->schema([
                         Forms\Components\Textarea::make('desc')
+                            ->minLength(2)
+                            ->maxLength(1024)
+                            ->autosize(),
                     ]),
             ]);
     }
@@ -91,7 +94,8 @@ class BooksResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('image_featured'),
                 Tables\Columns\TextColumn::make('desc')
-                    ->searchable(),
+                    ->searchable()
+                    ->limit(1000),
                 Tables\Columns\TextColumn::make('tag')
                     ->searchable(),
             ])

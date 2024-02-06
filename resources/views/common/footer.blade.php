@@ -55,7 +55,7 @@
                     class="text-white flex items-center hover:bg-violet-400 p-2 rounded-full">
                     <x-bi-envelope-at-fill /><span class="ml-1">masagenapress@gmail.com</span></a>
                 <div class="text-white flex items-center hover:bg-violet-400 p-2 rounded-full">
-                    <span>CP : 0813-5529-0311</span>
+                    <x-bi-phone-fill /><span class="ml-1">CP : 0813-5529-0311</span>
                 </div>
                 <div class="text-white flex items-center hover:bg-violet-400 p-2 rounded-full">
                     <x-bi-phone-fill /><span class="ml-1">Hp : 0853-9850-9700</span>

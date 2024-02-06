@@ -16,14 +16,15 @@
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <!-- Logo and company name here -->
             <div class="flex items-center">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-10 w-10 mr-3">
+                <img src="{{ asset('assets/logo-masagena.png') }}" alt="Logo" class="h-14 w-14 mr-3">
                 <span class="font-bold text-xl">Yayasan Masagena Center</span>
             </div>
             <!-- Navigation -->
             <nav>
                 <ul class="flex space-x-4">
-                    <li><a href="/" class="text-gray-600 hover:bg-gray-200 hover:text-gray-1000 p-2 rounded-full">Beranda</a></li>
-                    <li><a href="/books" class="text-gray-600 hover:bg-gray-200 hover:text-gray-1000 p-2 rounded-full">Books</a></li>
+                    <li><a href="/" class="text-gray-600 hover:text-gray-900">Beranda</a></li>
+                    <li><a href="/books" class="text-gray-600 hover:text-gray-900">Books</a></li>
+                    <li><a href="/about" class="text-gray-600 hover:text-gray-900">About us</a></li>
                 </ul>
             </nav>
         </div>

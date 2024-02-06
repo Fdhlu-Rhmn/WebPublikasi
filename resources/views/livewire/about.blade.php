@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center my-8">
+<div class="flex flex-col  justify-center my-8">
     <div class="max-w-7xl w-full items-center rounded overflow-hidden shadow-lg px-5 py-3 my-5 md:mx-auto border justify-center ">
         <div class="flex flex-col md:flex-shrink-0">
             <div class="flex justify-center my-4">
@@ -59,63 +59,108 @@
     <div class="max-w-7xl w-full items-center rounded overflow-hidden shadow-lg px-5 py-5 my-5 md:mx-auto border justify-center">
         <div class="flex flex-col md:flex-shrink-0">
             <div class="flex justify-center my-4">
-                <h1 class="text-4xl font-bold border-b-2 border-purple-600 pb-1 me-10">Susunan Pengurus</h1>
+                <h1 class="text-4xl font-bold border-b-2 border-purple-600 pb-1 me-10 ">Susunan Pengurus</h1>
             </div>
-            <table class="w-full text-sm text-left rtl:text-right">
+            <table class="w-full text-sm text-left rtl:text-right border-collapse border rounded-md">
                 <thead>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                        Nama
-                    </th>
-                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                        Jabatan
-                    </th>
+                    <tr class="bg-white border">
+                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black border">
+                            Nama
+                        </td>
+                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black border">
+                            Jabatan
+                        </td>
+                    </tr>
+                    
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            Judul
-                        </th>
+                    <tr class="bg-white border">
+                        <td scope="row" class="px-6 py-4 whitespace-nowrap border">
+                            1. Samsang, S.S.
+                        </td>
                         <td class="px-6 py-4">
+                            Ketua
                         </td>
                     </tr>
-                    <tr class="bg-white border-b">
-                        <th scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            Penulis
-                        </th>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            2. Satria Karsa, S.S.                         
+                        </td>
                         <td class="px-6 py-4">
+                            Sekretaris 
                         </td>
                     </tr>
-                    <tr class="bg-white border-b">
-                        <th scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            Ukuran Buku
-                        </th>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            3. Andi Farhani, SP.
+                        </td>
                         <td class="px-6 py-4">
+                            Bendahara
                         </td>
                     </tr>
-                    <tr class="bg-white border-b">
-                        <th scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            Jumlah Halaman
-                        </th>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            4. Andi Mus’hab A. Usman, S.S.                         
+                        </td>
                         <td class="px-6 py-4">
+                            Direktur Pelaksana Harian 
                         </td>
                     </tr>
-                    <tr class="bg-white border-b">
-                        <th scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            Tahun Terbit
-                        </th>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            5. Faris Wahyudi, SE.
+                        </td>
                         <td class="px-6 py-4">
+                            Direktur Pelaksana Harian
                         </td>
                     </tr>
-                    <tr class="bg-white border-b">
-                        <th scope="row"
-                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-black">
-                            ISBN
-                        </th>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            6. M. Abu Naim, S.S.                        
+                        </td>
                         <td class="px-6 py-4">
+                            Administrasi dan Keuangan 
+                        </td>
+                    </tr>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            7. Wahyudin HS.                        
+                        </td>
+                        <td class="px-6 py-4">
+                            Koord. Divisi Pengembangan dan Pendampingan Masy.                         
+                        </td>
+                    </tr>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            8. Fajar Ariady Suwardi, S.S.                        
+                        </td>
+                        <td class="px-6 py-4">
+                            Koord. Divisi Penelitian & Pengkajian                         
+                        </td>
+                    </tr>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            9. Akbar, S.Kom.I.                        
+                        </td>
+                        <td class="px-6 py-4">
+                            Koord. Divisi Peng.Usaha Ekonomi dan Teknologi Terapan                         
+                        </td>
+                    </tr>
+                    <tr class="bg-white border">
+                        <td scope="row"
+                            class="px-6 py-4 whitespace-nowrap border">
+                            10. Lainnya 9 orang                         
+                        </td>
+                        <td class="px-6 py-4">
+                            Staf Divisi                         
                         </td>
                     </tr>
                 </tbody>

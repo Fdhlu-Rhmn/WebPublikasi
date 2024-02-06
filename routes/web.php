@@ -24,6 +24,10 @@ Route::get('/books', function () {
     return view('pages.books');
 })->name('books');
 
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
 Route::get('/books/{bookId}', function ($bookId) {
     return view('pages.detailsBooks', ['bookId' => $bookId]);
 })->name('detailBooks');

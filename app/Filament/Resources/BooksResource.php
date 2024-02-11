@@ -44,16 +44,15 @@ class BooksResource extends Resource
                 Forms\Components\TextInput::make('years')
                     ->numeric(),
                 Forms\Components\TextInput::make('isbn')
-                    ->required()
                     ->maxLength(255)
                     ->label('ISBN'),
                 Forms\Components\Grid::make(1)
                     ->schema([
                         Forms\Components\Select::make('tag')
                             ->options([
-                                'new' => 'New Books',
-                                'old' => 'Old Books',
-                                'coming soon' => 'Coming Soon',
+                                '1' => 'New Books',
+                                '2' => 'Coming Soon',
+                                '3' => 'Old Books',
                             ]),
                     ]),
                 Forms\Components\Grid::make(1)
@@ -68,8 +67,8 @@ class BooksResource extends Resource
                 Forms\Components\Grid::make(1)
                     ->schema([
                         Forms\Components\Textarea::make('desc')
-                            ->minLength(50)
-                            ->maxLength(500)
+                            ->minLength(2)
+                            ->maxLength(1024)
                             ->autosize(),
                     ]),
             ]);
@@ -94,8 +93,10 @@ class BooksResource extends Resource
                 Tables\Columns\TextColumn::make('image_featured'),
                 Tables\Columns\TextColumn::make('desc')
                     ->searchable()
-                    ->limit(100000),
+                    ->limit(1000),
                 Tables\Columns\TextColumn::make('tag')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('price')
                     ->searchable(),
             ])
             ->filters([

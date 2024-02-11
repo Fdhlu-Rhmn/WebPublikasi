@@ -16,6 +16,10 @@ use Livewire\Livewire;
 
 // Route::get('/', \App\Livewire\Home::class)->name('home');
 
+Route::get('/foo', function () {
+    Artisan::call('storage:link');
+});
+
 Route::get('/', function () {
     return view('pages.beranda');
 })->name('beranda');
@@ -31,17 +35,3 @@ Route::get('/about', function () {
 Route::get('/books/{bookId}', function ($bookId) {
     return view('pages.detailsBooks', ['bookId' => $bookId]);
 })->name('detailBooks');
-
-
-
-// Route for social media redirects
-Route::get('/social/{platform}', function ($platform) {
-    switch ($platform) {
-        case 'facebook':
-            return redirect('https://www.facebook.com');
-        case 'instagram':
-            return redirect('https://www.instagram.com');
-        default:
-            return redirect('#');
-    }
-});

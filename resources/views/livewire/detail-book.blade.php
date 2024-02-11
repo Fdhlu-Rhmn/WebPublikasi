@@ -1,7 +1,7 @@
 <div class="flex flex-col justify-center my-8">
-    <div class="max-w-7xl w-full items-center rounded overflow-hidden shadow-lg px-5 py-3 md:mx-auto border justify-center">
+    <div class="max-w-4xl w-full rounded overflow-hidden shadow-lg px-5 py-5 md:mx-auto border">
         <div class="flex md:flex-shrink-0">
-            <img class="h-auto w-full md:w-48" src="{{ asset('storage/post-images/placeholder.jpeg') }}"
+            <img class="mb-2 mx-auto md:w-48" src="{{ asset('storage/post-images/placeholder.jpeg') }}"
                 data-src="{{ asset('storage/' . $book->image_featured) }}" alt="Cover Buku">
             <table class="w-full text-sm text-left rtl:text-right">
                 <tbody>
@@ -68,7 +68,7 @@
     <div class="max-w-7xl w-full md:mx-auto py-10">
         <div class="grid grid-cols-5 gap-4">
             @foreach ($books as $book)
-                <a href="books/{{ $book->id }}">
+                <a href="/books/{{ $book->id }}">
                     <div class="border-x-2 border-y-2  p-4 relative rounded-md shadow-lg">
                         <div class="mb-2 absolute top-0 right-0 bg-transparent text-right">
                             @php
@@ -88,7 +88,7 @@
                             src="{{ asset('storage/post-images/placeholder.jpeg') }}"
                             data-src="{{ asset('storage/' . $book->image_featured) }}" alt="Book Cover" class="mb-2 mx-auto">
                             <span class="mb-2 text-center ">{{ $book->title }}</span>
-                            <span class="text-justify">{{ $book->desc }}</span>
+                            <span class="text-justify truncate">{{ $book->desc }}</span>
                             <span class="font-semibold text-gray-900 text-sm py-2">{{ $book->isbn }}</span>
                             <span class="mb-2 text-center flex items-center"><x-bi-cart-fill class="text-gray-500 pr-1"/>{{ $book->price ?? 'Rp. XXX.XXX,XX' }}</span>
                         </div>

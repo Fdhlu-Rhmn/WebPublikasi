@@ -6,6 +6,7 @@ use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -13,6 +14,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class UserResource extends Resource
 {
@@ -24,18 +26,36 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required(fn(string $context): bool => $context === 'create')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('email')
-                    ->required(fn(string $context): bool => $context === 'create')
-                    ->unique(ignoreRecord: true)
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('password')
-                    ->visibleOn('create')
-                    ->dehydrateStateUsing(fn($state) => Hash::make($state))
-                    ->dehydrated(fn($state) => filled($state))
-                    ->required(fn(string $context): bool => $context === 'create'),
+                Section::make('User Details')->schema([
+                    Forms\Components\TextInput::make('name')
+                        ->required(fn(string $context): bool => $context === 'create')
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('email')
+                        ->required(fn(string $context): bool => $context === 'create')
+                        ->email()
+                        ->unique(ignoreRecord: true)
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('password')
+                        ->visibleOn('create')
+                        ->password()
+                        ->dehydrateStateUsing(fn($state) => Hash::make($state))
+                        ->dehydrated(fn($state) => filled($state))
+                        ->revealable()
+                        ->rule(Password::default())
+                        ->required(fn(string $context): bool => $context === 'create'),
+                ]),
+                Section::make('Password Reset')->schema([
+                    Forms\Components\TextInput::make('new_password')
+                        ->nullable()
+                        ->password()
+                        ->revealable()
+                        ->rule(Password::default()),
+                    Forms\Components\TextInput::make('new_password_confirmation')
+                        ->password()
+                        ->same('new_password')
+                        ->requiredWith('new_password')
+                        ->revealable(),
+                ])->visibleOn('edit'),
             ]);
     }
 
@@ -46,7 +66,6 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('password'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')

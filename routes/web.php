@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Livewire\Livewire;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', \App\Livewire\Home::class)->name('home');
 
-Route::get('/app', function () {
-    return view('app');
+Route::get('/', function () {
+    return view('pages.beranda');
+})->name('beranda');
+
+Route::get('/books', function () {
+    return view('pages.books');
+})->name('books');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
+
+Route::get('/books/{bookId}', function ($bookId) {
+    return view('pages.detailsBooks', ['bookId' => $bookId]);
+})->name('detailBooks');
+
+
+
+// Route for social media redirects
+Route::get('/social/{platform}', function ($platform) {
+    switch ($platform) {
+        case 'facebook':
+            return redirect('https://www.facebook.com');
+        case 'instagram':
+            return redirect('https://www.instagram.com');
+        default:
+            return redirect('#');
+    }
 });

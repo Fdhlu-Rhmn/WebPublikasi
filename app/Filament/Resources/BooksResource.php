@@ -68,8 +68,8 @@ class BooksResource extends Resource
                 Forms\Components\Grid::make(1)
                     ->schema([
                         Forms\Components\Textarea::make('desc')
-                            ->minLength(2)
-                            ->maxLength(1024)
+                            ->minLength(50)
+                            ->maxLength(500)
                             ->autosize(),
                     ]),
             ]);
@@ -88,14 +88,13 @@ class BooksResource extends Resource
                 Tables\Columns\TextColumn::make('book_page')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('years')
-                    ->date()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('isbn')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('image_featured'),
                 Tables\Columns\TextColumn::make('desc')
                     ->searchable()
-                    ->limit(1000),
+                    ->limit(100000),
                 Tables\Columns\TextColumn::make('tag')
                     ->searchable(),
             ])

@@ -25,6 +25,8 @@
                     <li><a href="/" class="text-gray-600 hover:text-gray-900">Beranda</a></li>
                     <li><a href="/books" class="text-gray-600 hover:text-gray-900">Books</a></li>
                     <li><a href="/about" class="text-gray-600 hover:text-gray-900">About us</a></li>
+                    <li><a href="/admin" class="text-gray-600 hover:text-gray-900">About us</a></li>
+
                 </ul>
             </nav>
         </div>

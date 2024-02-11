@@ -35,7 +35,7 @@
                                 src="{{ asset('storage/post-images/placeholder.jpeg') }}"
                                 data-src="{{ asset('storage/' . $book->image_featured) }}" alt="Book Cover" class="mb-2 mx-auto">
                                 <span class="mb-2 text-center ">{{ $book->title }}</span>
-                                <span class="text-justify">{{ $book->desc }}</span>
+                                <p class="text-justify truncate w-30">{{ $book->desc }}</p>
                                 <span class="font-semibold text-gray-900 text-sm py-2">{{ $book->isbn }}</span>
                                 <span class="mb-2 text-center flex items-center"><x-bi-cart-fill class="text-gray-500 pr-1"/>{{ $book->price ?? 'Rp. XXX.XXX,XX' }}</span>
                             </div>

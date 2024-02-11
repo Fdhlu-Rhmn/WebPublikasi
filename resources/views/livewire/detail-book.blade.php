@@ -1,7 +1,7 @@
 <div class="flex flex-col justify-center my-8">
-    <div class="max-w-4xl w-full rounded overflow-hidden shadow-lg px-5 py-5 md:mx-auto border">
+    <div class="max-w-7xl w-full items-center rounded overflow-hidden shadow-lg px-5 py-3 md:mx-auto border justify-center">
         <div class="flex md:flex-shrink-0">
-            <img class="h-auto w-full object-cover md:w-48" src="{{ asset('storage/post-images/placeholder.jpeg') }}"
+            <img class="h-auto w-full md:w-48" src="{{ asset('storage/post-images/placeholder.jpeg') }}"
                 data-src="{{ asset('storage/' . $book->image_featured) }}" alt="Cover Buku">
             <table class="w-full text-sm text-left rtl:text-right">
                 <tbody>
